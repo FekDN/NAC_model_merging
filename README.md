@@ -173,6 +173,29 @@ def merge_models_with_nac(
 
 ```
 
+---
+
+## Synergy with Advanced Architectures: NAC and EMM
+
+While NAC provides a powerful framework for merging structurally identical models, advanced research systems like the **Elastic Memory Model (EMM)** tackle the challenge of merging *heterogeneous* architectures.
+
+*   **EMM ([https://github.com/FekDN/EMM](https://github.com/FekDN/EMM))** is a system that assimilates knowledge from diverse expert models into a single, consolidated network. It operates by analyzing the *functional similarity* of layers (how they behave on given inputs) rather than their structure. To do this, it uses complex, heuristic-based metrics like Centered Kernel Alignment (CKA) and Singular Vector Canonical Correlation Analysis (SVCCA) to estimate if two different layers perform a similar role.
+
+The two approaches represent two sides of the same coin: **structural analysis vs. functional analysis**.
+
+| Approach | NAC (Structural "Genomics") | EMM (Functional "Neurophysiology") |
+| :--- | :--- | :--- |
+| **Method** | Compares the fundamental binary code (`ABCD[]`) of model components. | Measures and compares activation patterns from live model inference. |
+| **Goal** | Find **architecturally identical** components ("genes"). | Find **functionally similar** components ("cognitive roles"). |
+| **Reliability** | **Deterministic & Mathematical.** A match is a 100% guarantee of isomorphism. | **Heuristic & Probabilistic.** A match is a high-probability estimate based on complex metrics and thresholds. |
+| **Scope** | Merging identical or near-identical models and blocks. | Merging completely different architectures (e.g., BERT + RoBERTa). |
+
+**The true potential lies in their integration.** NAC allows merging models and their parts (at the "gene" or pattern level) at a more fundamental and reliable level than the current implementation in EMM. If the NAC standard were adopted, its integration into EMM would revolutionize the merging process by **replacing complex heuristics with mathematical precision.**
+
+Instead of relying solely on functional similarity, an NAC-powered EMM would first check for structural identity using NAC signatures. This would make the assimilation process faster, more reliable, and capable of even more granular, sub-layer merging, truly unlocking the potential of a universal AI knowledge base.
+
+---
+
 ## Learn More About NAC
 
 This merging capability is just one application of the NAC framework. To explore the full project, including the specification, compiler, and the vision for a universal AI genome, please visit the main repository:
